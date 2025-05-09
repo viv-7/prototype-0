@@ -1,0 +1,17 @@
+.leaf {
+    position: fixed;
+    width: 30px;
+    height: auto;
+    pointer-events: none;
+    z-index: -1; /* Behind content */
+    animation: falling linear infinite;
+  }
+  
+  @keyframes falling {
+    0% {
+      transform: translateY(-10%) translateX(-10px) rotate(0deg);
+    }
+    100% {
+      transform: translateY(100vh) translateX(10px) rotate(360deg);
+    }
+  }

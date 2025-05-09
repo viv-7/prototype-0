@@ -7,10 +7,11 @@ import FrontendRoadmap from './components/FrontendRoadmap';
 import BackendRoadmap from './components/BackendRoadmap';
 import DatabaseRoadmap from './components/DatabaseRoadmap';
 import SoftSkills from './components/SoftSkills';
+import FallingLeaves from './components/FallingLeaves';
 import './App.css';
 
 function App() {
-  return (
+  return (<>
     <Router>
       <div className="app">
         <Header />
@@ -26,6 +27,11 @@ function App() {
         </main>
       </div>
     </Router>
+    
+      <FallingLeaves />
+     
+    
+    </>
   );
 }
 
