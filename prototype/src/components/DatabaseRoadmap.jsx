@@ -1,10 +1,7 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import './Roadmap.css';
+import Roadmap from './Roadmap';
 
 const DatabaseRoadmap = () => {
-  const navigate = useNavigate();
-
   const steps = [
     { id: 1, title: "Database Fundamentals", description: "What is a database, types of databases" },
     { id: 2, title: "Relational Databases", description: "Tables, rows, columns, relationships" },
@@ -19,22 +16,11 @@ const DatabaseRoadmap = () => {
   ];
 
   return (
-    <div className="roadmap-container">
-      <h1>Database Roadmap</h1>
-      <div className="tree">
-        {steps.map((step, index) => (
-          <div key={step.id} className="step">
-            <div className="node">{index + 1}</div>
-            <div className="step-content">
-              <h3>{step.title}</h3>
-              <p>{step.description}</p>
-            </div>
-            {index < steps.length - 1 && <div className="connector"></div>}
-          </div>
-        ))}
-      </div>
-      <button className="back-button" onClick={() => navigate('/technical')}>Back to Technical Skills</button>
-    </div>
+    <Roadmap 
+      title="Database"
+      steps={steps}
+      backPath="/technical"
+    />
   );
 };
 

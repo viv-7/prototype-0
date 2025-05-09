@@ -1,10 +1,7 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import './Roadmap.css';
+import Roadmap from './Roadmap';
 
 const SoftSkills = () => {
-  const navigate = useNavigate();
-
   const steps = [
     { id: 1, title: "Communication", description: "Verbal and written communication skills" },
     { id: 2, title: "Teamwork", description: "Collaborating effectively with others" },
@@ -19,22 +16,11 @@ const SoftSkills = () => {
   ];
 
   return (
-    <div className="roadmap-container">
-      <h1>Soft Skills Roadmap</h1>
-      <div className="tree">
-        {steps.map((step, index) => (
-          <div key={step.id} className="step">
-            <div className="node">{index + 1}</div>
-            <div className="step-content">
-              <h3>{step.title}</h3>
-              <p>{step.description}</p>
-            </div>
-            {index < steps.length - 1 && <div className="connector"></div>}
-          </div>
-        ))}
-      </div>
-      <button className="back-button" onClick={() => navigate('/')}>Back to Home</button>
-    </div>
+    <Roadmap 
+      title="Soft Skills"
+      steps={steps}
+      backPath="/"
+    />
   );
 };
 
