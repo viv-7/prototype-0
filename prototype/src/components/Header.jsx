@@ -7,7 +7,7 @@ const Header = () => {
     <header className="app-header">
       <div className="header-container">
         <Link to="/" className="logo-link">
-          <h1 className="app-title">DevRoadmap</h1>
+          <h1 className="app-title">SkillGarden</h1>
         </Link>
         
         <nav className="nav-links">

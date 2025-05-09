@@ -137,4 +137,18 @@
   background-color: #45a049;
 }
 
+/* Add to existing Roadmap.css */
+.roadmap-container {
+  position: relative;
+  transition: margin-right 0.3s;
+}
 
+.skill-panel-open {
+  margin-right: 400px;
+}
+
+@media (max-width: 768px) {
+  .skill-panel-open {
+    margin-right: 0;
+  }
+}
