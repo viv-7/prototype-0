@@ -1,0 +1,34 @@
+.home-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .options {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+  }
+  
+  .option-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .option-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  }
+  
+  .option-card h2 {
+    color: #2c3e50;
+  }
+  
+  .option-card p {
+    color: #7f8c8d;
+  }

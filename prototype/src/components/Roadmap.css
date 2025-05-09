@@ -1,0 +1,61 @@
+.roadmap-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .tree {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+  }
+  
+  .step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+    position: relative;
+  }
+  
+  .node {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #4CAF50;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+    z-index: 1;
+  }
+  
+  .step-content {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    width: 80%;
+    max-width: 600px;
+    text-align: left;
+  }
+  
+  .step-content h3 {
+    margin-top: 0;
+    color: #2c3e50;
+  }
+  
+  .step-content p {
+    color: #7f8c8d;
+    margin-bottom: 0;
+  }
+  
+  .connector {
+    width: 2px;
+    height: 30px;
+    background-color: #4CAF50;
+    position: absolute;
+    bottom: -20px;
+  }
