@@ -121,3 +121,58 @@
       width: 100%;
     }
   }
+
+  /* Workshop Section */
+.workshop-section {
+  margin-top: 20px;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.workshop-header {
+  background: rgba(0,0,0,0.1);
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.workshop-header:hover {
+  background: rgba(0,0,0,0.2);
+}
+
+.workshop-details {
+  padding: 15px;
+  background: rgba(0,0,0,0.05);
+}
+
+.workshop-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.workshop-meta span {
+  background: rgba(255,255,255,0.1);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+.workshop-button {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #4CAF50;
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.workshop-button:hover {
+  background: #45a049;
+}

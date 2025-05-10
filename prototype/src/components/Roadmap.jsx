@@ -95,24 +95,22 @@ const Roadmap = ({ title, steps, backPath }) => {
       </div>
 
       <div className="tree">
-        {steps.map((step, index) => (
-          <div 
-            key={step.id} 
-            className="step"
-            onContextMenu={(e) => handleContextMenu(e, step.id)}
-            onClick={() => handleSkillClick(step)}
-          >
-            <div className={`node ${completedSteps.includes(step.id) ? 'completed' : ''}`}>
-              {index + 1}
-            </div>
-            <div className={`step-content ${completedSteps.includes(step.id) ? 'completed' : ''}`}>
-              <h3>{step.title}</h3>
-              <p>{step.description}</p>
-            </div>
-            {index < steps.length - 1 && <div className="connector"></div>}
-          </div>
-        ))}
+  {steps.map((step, index) => (
+    <div 
+      key={step.id} 
+      className={`step glass-card ${completedSteps.includes(step.id) ? 'completed' : ''}`}
+      onContextMenu={(e) => handleContextMenu(e, step.id)}
+      onClick={() => handleSkillClick(step)}
+    >
+      <div className="node">{index + 1}</div>
+      <div className="step-content">
+        <h3>{step.title}</h3>
+        <p>{step.description}</p>
       </div>
+      {index < steps.length - 1 && <div className="connector"></div>}
+    </div>
+  ))}
+</div>
 
       <button className="back-button" onClick={() => navigate(backPath)}>
         Back

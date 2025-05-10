@@ -141,6 +141,10 @@
 .roadmap-container {
   position: relative;
   transition: margin-right 0.3s;
+  background-color: hwb(123 48% 19%);
+background-size: cover;
+padding: 20px;
+min-height: 100vh;
 }
 
 .skill-panel-open {
@@ -150,5 +154,41 @@
 @media (max-width: 768px) {
   .skill-panel-open {
     margin-right: 0;
+  }
+}
+
+
+/* Glass panel base */
+.glass-card {
+  background: rgba(255, 255, 255, 0.15); /* Adjust opacity (0.15-0.3) */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px); /* Safari support */
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+/* Enhance contrast for content */
+.glass-card h3, 
+.glass-card p {
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Hover effect */
+.glass-card:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+}
+
+/* For dark mode compatibility */
+.dark .glass-card {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+@supports not (backdrop-filter: blur(12px)) {
+  .glass-card {
+    background: rgba(255,255,255,0.9); /* Solid fallback */
   }
 }
